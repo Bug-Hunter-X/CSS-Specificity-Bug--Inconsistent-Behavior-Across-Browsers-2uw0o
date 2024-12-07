@@ -1,0 +1,18 @@
+To avoid this issue, use more precise selectors or utilize the `!important` flag (though this is generally discouraged for maintainability reasons):
+
+```css
+div p {
+  color: blue;
+}
+
+p {
+  color: red !important; /*Generally not recommended for maintainability*/
+}
+
+/* A better solution is to be more precise about which elements to style*/
+.specific-paragraph {
+  color: red;
+}
+```
+
+The `!important` flag forces the rule to take precedence, but it's often better to restructure the CSS to avoid such conflicts. The ideal solution would be to add a class to the paragraph element that needs the red color. This ensures better control and predictability without relying on the `!important` declaration.
